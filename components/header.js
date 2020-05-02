@@ -1,8 +1,11 @@
 import Link from './link'
+import { useContext } from 'react'
+import { ThemeContext } from './layout'
 import { MdMovieFilter } from 'react-icons/md'
 import { FaMoon } from 'react-icons/fa'
 
 const Header = () => {
+  const themeContext = useContext(ThemeContext)
   return (
     <nav>
       <div className="nav-brands">
@@ -18,7 +21,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="nav-theme">
-        <FaMoon size="1.6rem" />
+        <FaMoon onClick={() => themeContext.themeDispatch(themeContext.themeState)} size="1.6rem" />
       </div>
     </nav>
   )
