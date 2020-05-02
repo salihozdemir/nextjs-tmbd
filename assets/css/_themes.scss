@@ -1,14 +1,16 @@
+$black: #18191a;
+$black-gray: #2a2c2f;
+$white: #fff;
+
 $themes: (
     dark: (
-        nav-bg: #56727C,
-        nav-color: #D9E9EF,
-        nav-selected-bg: #415F69,
-        nav-selected-color: #FFFFFF,
+        nav-bg: $black,
+        nav-color: $white,
+        nav-selected-bg: $black-gray,
     ),
     light: (
-        nav-bg: rgb(200, 209, 212),
-        nav-color: #111,
-        nav-selected-bg: #415F69,
-        nav-selected-color: #FFFFFF,
-    )
+        nav-bg: $white,
+        nav-color: $black,
+        nav-selected-bg: $white,
+    ),
 );
