@@ -21,7 +21,9 @@ const Header = () => {
         </Link>
       </div>
       <div className="nav-theme">
-        <FaMoon onClick={() => themeContext.themeDispatch(themeContext.themeState)} size="1.6rem" />
+        <button onClick={() => themeContext.themeDispatch(themeContext.themeState)}>
+          <FaMoon size="1.6rem" />
+        </button>
       </div>
     </nav>
   )

@@ -72,7 +72,19 @@ nav {
 
   .nav-theme {
     margin-right: 10px;
-    cursor: pointer;
+
+    button {
+      background: none;
+      cursor: pointer;
+      border: 0;
+      padding: 5px;
+      transition: color 0.15s ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
     @include themify($themes) {
       color: themed("nav-color");
     }
