@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <nav>
       <div className="nav-brands">
-        <MdMovieFilter size="3rem" />
-        <div>My Sample</div>
+        <MdMovieFilter className="logo" />
+        <div className="text">My Sample</div>
       </div>
       <div className="nav-items">
         <Link href="/">
