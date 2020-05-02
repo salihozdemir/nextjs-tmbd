@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  @include themify($themes) {
+    background-color: themed('nav-bg');
+  }
+  .nav-item {
+    padding: 5px 15px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    font-family: monospace;
+    text-decoration: none;
+    cursor: pointer;
+    @include themify($themes) {
+      color: themed('nav-color');
+    }
+  }
+
+  .selected {
+    border-radius: 4px;
+    @include themify($themes) {
+      border-bottom: 2px solid themed(nav-color);
+      color: themed(nav-selected-color);
+      background-color: themed(nav-selected-bg);
+    }
+  }
+}

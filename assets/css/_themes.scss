@@ -1,0 +1,32 @@
+$themes: (
+    dark: (
+        nav-bg: #56727C,
+        nav-color: #D9E9EF,
+        nav-selected-bg: #415F69,
+        nav-selected-color: #FFFFFF,
+    ),
+    light: (
+        nav-bg: rgb(200, 209, 212),
+        nav-color: #111,
+        nav-selected-bg: #415F69,
+        nav-selected-color: #FFFFFF,
+    )
+);
+
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+      .theme-#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), '#{$key}');
+          $theme-map: map-merge($theme-map, ($key: $value)) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    }
+  }
+  
+  @function themed($key) {
+    @return map-get($theme-map, $key);
+  }
