@@ -1,30 +1,54 @@
 nav {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  font-family: monospace;
+  padding: 10px;
   @include themify($themes) {
     background-color: themed('nav-bg');
   }
-  .nav-item {
-    padding: 5px 15px;
+
+  .nav-brands {
+    display: flex;
+    align-items: center;
     font-size: 1.4rem;
-    font-weight: bolder;
-    font-family: monospace;
-    text-decoration: none;
-    cursor: pointer;
     @include themify($themes) {
       color: themed('nav-color');
     }
+    * {
+      padding: 0px 5px;
+    }
   }
 
-  .selected {
-    border-radius: 4px;
+  .nav-items {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    
+    .nav-item {
+      padding: 5px 15px;
+      cursor: pointer;
+      text-decoration: none;
+      @include themify($themes) {
+        color: themed('nav-color');
+      }
+    }
+
+    .selected {
+      border-radius: 4px;
+      @include themify($themes) {
+        border-bottom: 2px solid themed(nav-color);
+        color: themed(nav-selected-color);
+        background-color: themed(nav-selected-bg);
+      }
+    }
+  }
+
+  .nav-theme {
     @include themify($themes) {
-      border-bottom: 2px solid themed(nav-color);
-      color: themed(nav-selected-color);
-      background-color: themed(nav-selected-bg);
+      color: themed('nav-color');
     }
   }
 }

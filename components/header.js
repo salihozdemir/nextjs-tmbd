@@ -1,10 +1,15 @@
 import Link from './link'
+import { MdMovieFilter } from 'react-icons/md'
+import { FaMoon } from 'react-icons/fa'
 
 const Header = () => {
   return (
     <nav>
-      <div>Brand Logo</div>
-      <div>
+      <div className="nav-brands">
+        <MdMovieFilter size="3rem" />
+        <div>My Sample</div>
+      </div>
+      <div className="nav-items">
         <Link href="/">
           <a className="nav-item">Movies</a>
         </Link>
@@ -12,7 +17,9 @@ const Header = () => {
           <a className="nav-item">TV Shows</a>
         </Link>
       </div>
-      <div>Theme Change</div>
+      <div className="nav-theme">
+        <FaMoon size="1.6rem" />
+      </div>
     </nav>
   )
 }
