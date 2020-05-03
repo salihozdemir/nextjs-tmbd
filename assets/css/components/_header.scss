@@ -6,6 +6,7 @@ nav {
   font-family: monospace;
   padding: 10px;
   box-shadow: 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease-in-out;
   @include themify($themes) {
     background-color: themed(general-bg);
   }
