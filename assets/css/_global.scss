@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: monospace;
 }
@@ -10,38 +14,6 @@ body {
   }
 }
 
-.card {
-  width: 150px;
-  min-width: 150px;
-  margin: 10px 0px;
-  .card-img {
-    position: relative;
-    height: 0;
-    padding-top: calc(225 / 150 * 100%);
-    img {
-      border-radius: $card-imageBorderRadius;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .card-body {
-    padding: 10px;
-    h2 {
-      font-weight: bolder;
-      text-align: left;
-      font-size: 1rem;
-    }
-    p {
-      text-align: left;
-      margin-top: 0.5rem;
-      font-size: 0.8rem;
-      @include themify($themes) {
-        color: themed(release-date);
-      }
-    }
-  }
+.container {
+  padding: 0px 0.5rem;
 }

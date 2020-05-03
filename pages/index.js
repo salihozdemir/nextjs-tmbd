@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { useState } from 'react'
-import Link from 'next/link'
-import slug from 'slug'
 import InfiniteScroll from 'react-infinite-scroller'
+import Card from '../components/card'
+
 
 export default () => {
   const [movieList, setMovieList] = useState([])
@@ -34,22 +34,13 @@ export default () => {
         <div className="row center-xs">
           {movieList.map((movie) => (
             <div className="col-xs" key={movie.id}>
-              <div className="card" >
-                <div className="card-img">
-                  <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
-                </div>
-                <div className="card-body">
-                  <Link
-                    href="/movie/[slug]"
-                    as={`/movie/${slug(movie.title)}-${movie.id}`}
-                  >
-                    <h2>
-                      {movie.original_title}
-                    </h2>
-                  </Link>
-                  <p>{movie.release_date}</p>
-                </div>
-              </div>
+              <Card
+                id={movie.id}
+                title={movie.title}
+                original_title={movie.original_title}
+                poster_path={movie.poster_path}
+                release_date={movie.release_date}
+                overview={movie.overview} />
             </div>
 
           ))}

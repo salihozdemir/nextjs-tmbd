@@ -1,5 +1,4 @@
 $black: #18191a;
-$black-gray: #2a2c2f;
 $white: #fff;
 
 $card-imageBorderRadius: 8px;
@@ -8,13 +7,15 @@ $themes: (
     dark: (
         general-bg: $black,
         general-color: $white,
-        nav-selected-bg: $black-gray,
+        nav-selected-bg: #2a2c2f,
         release-date: #acacac,
+        card-border-color: #414141,
     ),
     light: (
         general-bg: $white,
         general-color: $black,
-        nav-selected-bg: $white,
+        nav-selected-bg: #00000012,
         release-date: #00000099,
+        card-border-color: rgba(227, 227, 227, 1),
     ),
 );
