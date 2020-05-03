@@ -1,4 +1,6 @@
-@import 'reset.scss';
-@import 'themes';
-@import 'mixins';
-@import './components/index.scss'
+@import "reset.scss";
+@import "themes";
+@import "mixins";
+@import "grid/flexboxgrid.min.css";
+@import "global";
+@import "./components/index.scss";

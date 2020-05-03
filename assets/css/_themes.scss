@@ -2,15 +2,19 @@ $black: #18191a;
 $black-gray: #2a2c2f;
 $white: #fff;
 
+$card-imageBorderRadius: 8px;
+
 $themes: (
     dark: (
-        nav-bg: $black,
-        nav-color: $white,
+        general-bg: $black,
+        general-color: $white,
         nav-selected-bg: $black-gray,
+        release-date: #acacac,
     ),
     light: (
-        nav-bg: $white,
-        nav-color: $black,
+        general-bg: $white,
+        general-color: $black,
         nav-selected-bg: $white,
+        release-date: #00000099,
     ),
 );

@@ -7,7 +7,7 @@ nav {
   padding: 10px;
   box-shadow: 0 3px 1px -1px rgba(0, 0, 0, 0.2);
   @include themify($themes) {
-    background-color: themed("nav-bg");
+    background-color: themed(general-bg);
   }
 
   .nav-brands {
@@ -15,7 +15,7 @@ nav {
     align-items: center;
     flex-grow: 2;
     @include themify($themes) {
-      color: themed("nav-color");
+      color: themed(general-color);
     }
     @include mediaQuery(600px) {
       flex-grow: 0;
@@ -54,7 +54,7 @@ nav {
       cursor: pointer;
       text-decoration: none;
       @include themify($themes) {
-        color: themed("nav-color");
+        color: themed(general-color);
       }
       @include mediaQuery(600px) {
         font-size: 0.9rem;
@@ -64,7 +64,7 @@ nav {
     .selected {
       border-radius: 4px;
       @include themify($themes) {
-        border-bottom: 2px solid themed(nav-color);
+        border-bottom: 2px solid themed(general-color);
         color: themed(nav-selected-color);
         background-color: themed(nav-selected-bg);
       }
@@ -83,7 +83,7 @@ nav {
       svg {
         transition: color 0.5s ease-in-out;
         @include themify($themes) {
-          color: themed("nav-color");
+          color: themed(general-color);
         }
       }
 

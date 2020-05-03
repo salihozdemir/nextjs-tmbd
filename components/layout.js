@@ -28,8 +28,10 @@ const Layout = ({ children }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <main id="app-root" className={theme}>
-        <Header></Header>
-        {children}
+        <div className="background">
+          <Header></Header>
+          {children}
+        </div>
       </main>
     </ThemeContext.Provider>
   )

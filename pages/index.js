@@ -29,12 +29,12 @@ export default () => {
         loadMore={fetchMore.bind(this)}
         hasMore={hasMore}
         threshold={1000}
-        loader={<h4>Loading...</h4>}
+        loader={<h4 key={0}>Loading...</h4>}
       >
-        <div className="row">
+        <div className="row center-xs">
           {movieList.map((movie) => (
-            <div className="col-xs">
-              <div className="card" key={movie.id}>
+            <div className="col-xs" key={movie.id}>
+              <div className="card" >
                 <div className="card-img">
                   <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} />
                 </div>
@@ -43,10 +43,11 @@ export default () => {
                     href="/movie/[slug]"
                     as={`/movie/${slug(movie.title)}-${movie.id}`}
                   >
-                    <a className="btn btn-link">
+                    <h2>
                       {movie.original_title}
-                    </a>
+                    </h2>
                   </Link>
+                  <p>{movie.release_date}</p>
                 </div>
               </div>
             </div>
