@@ -14,13 +14,11 @@ nav {
   .nav-brands {
     display: flex;
     align-items: center;
-    flex-grow: 2;
+    flex-grow: 1;
     @include themify($themes) {
       color: themed(general-color);
     }
-    @include mediaQuery(600px) {
-      flex-grow: 0;
-    }
+
     .logo {
       font-size: 3rem;
       cursor: pointer;
@@ -46,10 +44,7 @@ nav {
     justify-content: flex-start;
     font-size: 1.2rem;
     font-weight: bolder;
-    flex-grow: 2;
-    @include mediaQuery(600px) {
-      flex-grow: 0;
-    }
+
     .nav-item {
       padding: 5px 15px;
       cursor: pointer;
@@ -73,6 +68,9 @@ nav {
   }
 
   .nav-theme {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
     margin-right: 10px;
 
     button {
@@ -91,10 +89,6 @@ nav {
       &:focus {
         outline: none;
       }
-    }
-
-    @include mediaQuery(600px) {
-      flex-grow: 0;
     }
   }
 }
