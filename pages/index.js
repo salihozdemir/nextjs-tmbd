@@ -3,7 +3,6 @@ import { useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroller'
 import Card from '../components/card'
 
-
 export default () => {
   const [movieList, setMovieList] = useState([])
   const [hasMore, setHasMore] = useState(true)
@@ -37,12 +36,11 @@ export default () => {
               <Card
                 id={movie.id}
                 title={movie.title}
-                original_title={movie.original_title}
                 poster_path={movie.poster_path}
                 release_date={movie.release_date}
-                overview={movie.overview} />
+                overview={movie.overview}
+              />
             </div>
-
           ))}
         </div>
       </InfiniteScroll>
