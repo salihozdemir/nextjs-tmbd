@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import slug from 'slug'
+import VoteChart from './voteChart'
 
-const Card = ({ id, title, release_date, poster_path, overview }) => {
+const Card = ({ id, title, release_date, poster_path, overview, vote_average }) => {
   return (
     <div className="card">
       <div className="card-img">
@@ -10,6 +11,7 @@ const Card = ({ id, title, release_date, poster_path, overview }) => {
           title={title}
           alt={title}
         />
+        <VoteChart voteAverage={vote_average * 10}/>
       </div>
       <div className="card-body">
         <Link href="/movie/[slug]" as={`/movie/${slug(title)}-${id}`}>

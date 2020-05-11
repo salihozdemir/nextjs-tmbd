@@ -39,6 +39,7 @@ export default () => {
                 poster_path={movie.poster_path}
                 release_date={movie.release_date}
                 overview={movie.overview}
+                vote_average={movie.vote_average}
               />
             </div>
           ))}
