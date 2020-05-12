@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
       <Head>
         <title>My Sample</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet"></link>
       </Head>
       <main id="app-root" className={theme}>
         <div className="background">
