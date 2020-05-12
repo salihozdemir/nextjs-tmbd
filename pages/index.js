@@ -34,6 +34,7 @@ export default () => {
           {movieList.map((movie) => (
             <div className="col-xs" key={movie.id}>
               <Card
+                card_type="movie"
                 id={movie.id}
                 title={movie.title}
                 poster_path={movie.poster_path}

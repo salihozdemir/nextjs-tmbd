@@ -46,6 +46,11 @@
     text-align: left;
     width: 100%;
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     @include mediaQuery(450px) {
       padding: 10px;
     }
