@@ -5,4 +5,9 @@
     height: 45px;
     width: 45px;
     top: 1px;
+
+    @include mediaQuery(600px) {
+        height: 35px;
+        width: 35px;
+      }
 }
