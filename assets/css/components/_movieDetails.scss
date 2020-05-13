@@ -47,8 +47,44 @@
   }
 
   .info {
+    display: flex;
+    font-size: 14px;
+    margin-top: 4px;
     .release-date {
-      
+    }
+    .genres {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: '\2022';
+        left: 6px;
+        position: absolute;
+        top: 8.1px;
+        font-size: 35px;
+        line-height: 0;
+      }
+    }
+    .runtime {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: '\2022';
+        left: 6px;
+        position: absolute;
+        top: 8.1px;
+        font-size: 35px;
+        line-height: 0;
+      }
+    }
+  }
+
+  .votechart {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    .text {
+      padding-left: 10px;
     }
   }
 }

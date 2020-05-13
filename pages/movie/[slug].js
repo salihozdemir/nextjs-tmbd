@@ -1,4 +1,5 @@
 import axios from 'axios'
+import VoteChart from '../../components/voteChart'
 
 const MovieDetail = ({ movie }) => (
   <div id="detail">
@@ -18,14 +19,17 @@ const MovieDetail = ({ movie }) => (
             {movie.title} <span>({movie.release_date.slice(0, 4)})</span>
           </h2>
           <div className="info">
-            <div className="release-date">
-              {movie.release_date}
-            </div>
+            <div className="release-date">{movie.release_date}</div>
             <div className="genres">
               {movie.genres.map((genre) => (
-                <span>{genre.name}</span>
+                <span key={genre.id}>{genre.name},</span>
               ))}
             </div>
+            <div className="runtime">{movie.runtime}</div>
+          </div>
+          <div className="votechart">
+            <VoteChart className={"vote-chart-details"} />
+            <div className="text">User <br /> Score</div>
           </div>
         </div>
       </div>

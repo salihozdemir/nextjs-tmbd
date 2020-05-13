@@ -23,7 +23,7 @@ const Card = ({
             />
           </a>
         </Link>
-        <VoteChart voteAverage={vote_average * 10} />
+        <VoteChart voteAverage={vote_average * 10} className="vote-chart-index" />
       </div>
       <div className="card-body">
         <Link href="/movie/[slug]" as={`/${card_type}/${slug(title)}-${id}`}>

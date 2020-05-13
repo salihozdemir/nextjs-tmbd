@@ -1,13 +1,17 @@
-.vote-chart {
-    position: absolute;
-    position: absolute;
-    right: 1px;
-    height: 45px;
-    width: 45px;
-    top: 1px;
+.vote-chart-index {
+  position: absolute;
+  right: 1px;
+  height: 45px;
+  width: 45px;
+  top: 1px;
 
-    @include mediaQuery(600px) {
-        height: 35px;
-        width: 35px;
-      }
+  @include mediaQuery(600px) {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.vote-chart-details {
+  height: 55px;
+  width: 55px;
 }

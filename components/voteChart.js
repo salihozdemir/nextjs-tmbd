@@ -14,11 +14,11 @@ const getPathColor = (score) => {
   return 'rgb(' + red + ',' + green + ',0)'
 }
 
-const voteChart = ({ voteAverage = 0 }) => (
+const voteChart = ({ voteAverage = 0, className }) => (
   <CircularProgressbar
     value={voteAverage}
     text={`${voteAverage}%`}
-    className={"vote-chart"}
+    className={className}
     background={true}
     styles={buildStyles({
       pathColor: getPathColor(voteAverage),
