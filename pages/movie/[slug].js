@@ -1,9 +1,15 @@
 import axios from 'axios'
 import VoteChart from '../../components/voteChart'
+import Crew from '../../components/crew'
 
 const MovieDetail = ({ movie }) => (
   <div id="detail">
-    <div className="header">
+    <div
+      className="header"
+      style={{
+        backgroundImage: `url('https://image.tmdb.org/t/p/w1280${movie.backdrop_path}')`
+      }}
+    >
       <div className="custom-bg"></div>
     </div>
     <div className="container">
@@ -14,7 +20,7 @@ const MovieDetail = ({ movie }) => (
             src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
           />
         </div>
-        <div className="col-xs-8 col-sm-9">
+        <div className="col-sm-9">
           <h2 className="title">
             {movie.title} <span>({movie.release_date.slice(0, 4)})</span>
           </h2>
@@ -28,19 +34,20 @@ const MovieDetail = ({ movie }) => (
             <div className="runtime">{movie.runtime}</div>
           </div>
           <div className="votechart">
-            <VoteChart className={"vote-chart-details"} />
-            <div className="text">User <br /> Score</div>
+            <VoteChart className={'vote-chart-details'} />
+            <div className="text">
+              User <br /> Score
+            </div>
           </div>
+          <h3 className="tagline">{movie.tagline}</h3>
+          <h3>Overview</h3>
+          <p>{movie.overview}</p>
         </div>
       </div>
     </div>
-    <style jsx>
-      {`
-        .header {
-          background-image: url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path});
-        }
-      `}
-    </style>
+    <div className="container">
+      <Crew />
+    </div>
   </div>
 )
 
