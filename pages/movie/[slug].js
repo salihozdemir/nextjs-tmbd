@@ -1,6 +1,6 @@
 import axios from 'axios'
-import VoteChart from '../../components/voteChart'
-import Crew from '../../components/crew'
+import VoteChart from 'components/voteChart'
+import Crew from 'components/crew'
 
 const MovieDetail = ({ movie }) => (
   <div id="detail">
