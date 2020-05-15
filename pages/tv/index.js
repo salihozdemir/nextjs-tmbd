@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../utils/axios'
 import { useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroller'
 import Card from '../../components/card'
@@ -11,11 +11,10 @@ export default () => {
     if (page >= 500) {
       setHasMore(false)
     }
-
     axios
-      .get(
-        `https://api.themoviedb.org/3/discover/tv?api_key=148a68d49e546737c3a830d5df60f0d2&language=en-US&sort_by=popularity.desc&page=${page}&timezone=America%2FNew_York&include_null_first_air_dates=false`
-      )
+      .get('discover/tv', {
+        params: { api_key: process.env.API_KEY, page }
+      })
       .then((res) => {
         setTvList(tvList.concat(res.data.results))
       })
