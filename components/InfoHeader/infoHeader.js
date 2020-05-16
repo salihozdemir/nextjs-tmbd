@@ -32,7 +32,7 @@ const infoHeader = ({movie}) => (
             <div className="runtime">{movie.runtime}</div>
           </div>
           <div className="votechart">
-            <VoteChart className={'vote-chart-details'} />
+            <VoteChart voteAverage={movie.vote_average * 10} className={'vote-chart-details'} />
             <div className="text">
               User <br /> Score
             </div>

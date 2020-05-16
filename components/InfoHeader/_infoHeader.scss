@@ -48,8 +48,6 @@
     display: flex;
     font-size: 14px;
     margin-top: 4px;
-    .release-date {
-    }
     .genres {
       position: relative;
       padding-left: 20px;
@@ -102,5 +100,6 @@
 
   .overview {
     font-size: 1rem;
+    line-height: 1.4;
   }
 }
