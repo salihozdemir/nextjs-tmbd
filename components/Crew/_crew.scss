@@ -13,6 +13,9 @@
       border-radius: 8px;
       .card-img {
         min-width: 138px;
+        @include mediaQuery(767px) {
+          min-width: 90px;
+        }
         img {
           width: 100%;
           height: 100%;

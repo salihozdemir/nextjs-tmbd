@@ -37,7 +37,14 @@
   .title {
     font-size: 2rem;
 
+    @include mediaQuery(767px) {
+      font-size: 1.5rem;
+    }
     span {
+      font-size: 1.7rem;
+      @include mediaQuery(767px) {
+        font-size: 1.2rem;
+      }
       @include themify($themes) {
         color: themed(release-date);
       }
@@ -48,6 +55,24 @@
     display: flex;
     font-size: 14px;
     margin-top: 4px;
+    @include mediaQuery(767px) {
+      flex-direction: column;
+    }
+    .release-date {
+      position: relative;
+      padding-left: 20px;
+      &:before {
+        content: '\2022';
+        left: 6px;
+        position: absolute;
+        top: 8.1px;
+        font-size: 35px;
+        line-height: 0;
+      }
+      @include mediaQuery(767px) {
+        margin-top: 10px;
+      }
+    }
     .genres {
       position: relative;
       padding-left: 20px;
@@ -58,6 +83,9 @@
         top: 8.1px;
         font-size: 35px;
         line-height: 0;
+      }
+      @include mediaQuery(767px) {
+        margin-top: 10px;
       }
     }
     .runtime {
@@ -70,6 +98,9 @@
         top: 8.1px;
         font-size: 35px;
         line-height: 0;
+      }
+      @include mediaQuery(767px) {
+        margin-top: 10px;
       }
     }
   }
@@ -101,5 +132,18 @@
   .overview {
     font-size: 1rem;
     line-height: 1.4;
+  }
+
+  .d-xs-none {
+    display: none;
+    @include mediaQuery(767px) {
+      display: unset;
+    }
+  }
+
+  .d-xs-none-o {
+    @include mediaQuery(767px) {
+      display: none;
+    }
   }
 }
