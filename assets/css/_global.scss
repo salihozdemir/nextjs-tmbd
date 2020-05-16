@@ -5,15 +5,3 @@
 body {
   font-family: 'Balsamiq Sans', cursive;
 }
-
-.background {
-  transition: all 0.15s ease-in-out;
-  @include themify($themes) {
-    color: themed(general-color);
-    background-color: themed(general-bg);
-  }
-}
-
-.container {
-  padding: 0px 0.5rem;
-}

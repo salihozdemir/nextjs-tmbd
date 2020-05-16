@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import slug from 'slug'
-import VoteChart from './voteChart'
+import VoteChart from '../VoteChart/voteChart'
 
 const Card = ({
   card_type,

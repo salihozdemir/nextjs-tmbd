@@ -1,7 +1,17 @@
 @import "reset.scss";
 @import "themes";
 @import "mixins";
-@import "grid/flexboxgrid.min.css";
 @import "global";
-@import "./components/index.scss";
-@import "../../node_modules/react-circular-progressbar/dist/styles.css"
+
+// Third Party Package Styles
+@import "../../node_modules/flexboxgrid/dist/flexboxgrid.min.css";
+@import "../../node_modules/react-circular-progressbar/dist/styles.css";
+
+// Component Styles
+@import "../../components/Layout/_layout.scss";
+@import "../../components/Card/_card.scss";
+@import "../../components/Header/_header.scss";
+@import "../../components/VoteChart/_voteChart.scss";
+@import "../../components/InfoHeader/_infoHeader.scss";
+
+

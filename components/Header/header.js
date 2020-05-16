@@ -1,6 +1,6 @@
-import Link from './link'
+import Link from '../Link/link'
 import { useContext } from 'react'
-import { ThemeContext } from './layout'
+import { ThemeContext } from '../Layout/layout'
 import { MdMovieFilter } from 'react-icons/md'
 import { FaMoon } from 'react-icons/fa'
 

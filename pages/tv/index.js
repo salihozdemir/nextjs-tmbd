@@ -1,7 +1,7 @@
 import axios from 'utils/axios'
 import { useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroller'
-import Card from 'components/card'
+import Card from 'components/Card/card'
 
 export default () => {
   const [tvList, setTvList] = useState([])

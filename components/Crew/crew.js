@@ -1,7 +1,7 @@
 
 const crew = () => {
     return (
-        <div>
+        <div className="container">
             Im'crew
         </div>
     );

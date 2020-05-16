@@ -1,4 +1,4 @@
-import Header from './header'
+import Header from '../Header/header'
 import Head from 'next/head'
 import { useReducer } from 'react'
 

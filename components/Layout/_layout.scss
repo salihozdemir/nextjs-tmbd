@@ -1,0 +1,7 @@
+.background {
+  transition: all 0.15s ease-in-out;
+  @include themify($themes) {
+    color: themed(general-color);
+    background-color: themed(general-bg);
+  }
+}
