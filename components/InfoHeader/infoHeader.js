@@ -38,8 +38,8 @@ const infoHeader = ({movie}) => (
             </div>
           </div>
           <h3 className="tagline">{movie.tagline}</h3>
-          <h3>Overview</h3>
-          <p>{movie.overview}</p>
+          <h3 className="overview-title">Overview</h3>
+          <p className="overview">{movie.overview}</p>
         </div>
       </div>
     </div>

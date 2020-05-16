@@ -1,8 +1,11 @@
 #crew {
   .container {
-    padding-top: 50px;
     .col-xs {
       max-width: 170px;
+      z-index: 4;
+      @include themify($themes) {
+        filter: drop-shadow(2px 4px 6px themed(shadow-color));
+      }
     }
     .cast-card {
       margin: 10px 0;

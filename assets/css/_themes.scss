@@ -11,7 +11,8 @@ $themes: (
     release-date: #acacac,
     card-border-color: #414141,
     background-image:
-      linear-gradient(to right, #252525 150px, rgba(55, 55, 55, 0.84) 100%)
+      linear-gradient(to right, #17191a 150px, rgba(55, 55, 55, 0.55) 100%),
+    shadow-color: black
   ),
   light: (
     general-bg: $white,
@@ -20,6 +21,7 @@ $themes: (
     release-date: #00000099,
     card-border-color: rgba(227, 227, 227, 1),
     background-image:
-      linear-gradient(to right, #ffffff 150px, rgba(169, 169, 169, 0.8) 100%)
+      linear-gradient(to right, #ffffff 150px, rgba(169, 169, 169, 0.8) 100%),
+    shadow-color: #ffffff80
   )
 );

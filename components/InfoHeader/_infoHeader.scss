@@ -3,11 +3,10 @@
     position: absolute;
     width: 100%;
     z-index: 1;
-    border-bottom: 1px solid #2e2e2e;
     background-position: right -200px top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 475px;
+    height: 100%;
 
     .bg-color {
       height: 100%;
@@ -78,12 +77,30 @@
   }
 
   .votechart {
-    margin-top: 30px;
+    margin-top: 18px;
     display: flex;
     align-items: center;
 
     .text {
       padding-left: 10px;
+      font-weight: 700;
     }
+  }
+
+  .tagline {
+    margin-top: 28px;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.7;
+  }
+
+  .overview-title {
+    margin: 20px 0px 10px 0px;
+    font-size: 1.4rem;
+  }
+
+  .overview {
+    font-size: 1rem;
   }
 }
