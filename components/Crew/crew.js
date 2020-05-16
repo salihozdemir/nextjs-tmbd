@@ -4,7 +4,7 @@ const crew = ({ casts }) => {
       <div className="container">
         <div className="row middle-xs">
           {casts.map((cast) => (
-            <div className="col-xs" id={cast.id}>
+            <div key={cast.id} className="col-xs" id={cast.id}>
               <div className="cast-card">
                 <div className="card-img">
                   <img
