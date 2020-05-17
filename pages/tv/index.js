@@ -16,7 +16,9 @@ export default () => {
         params: { api_key: process.env.API_KEY, page }
       })
       .then((res) => {
-        setTvList(tvList.concat(res.data.results.filter(tv => tv.poster_path != null)))
+        setTvList(
+          tvList.concat(res.data.results.filter((tv) => tv.poster_path != null))
+        )
       })
   }
 
@@ -27,7 +29,11 @@ export default () => {
         loadMore={fetchMore.bind(this)}
         hasMore={hasMore}
         threshold={1000}
-        loader={<h4 key={0}>Loading...</h4>}
+        loader={
+          <div className="loader">
+            <h4 key={0}>Loading...</h4>
+          </div>
+        }
       >
         <div className="row center-xs">
           {tvList.map((tv) => (
