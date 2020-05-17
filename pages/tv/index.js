@@ -16,7 +16,7 @@ export default () => {
         params: { api_key: process.env.API_KEY, page }
       })
       .then((res) => {
-        setTvList(tvList.concat(res.data.results))
+        setTvList(tvList.concat(res.data.results.filter(tv => tv.poster_path != null)))
       })
   }
 

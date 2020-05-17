@@ -36,12 +36,14 @@
 
   .title {
     font-size: 2rem;
+    cursor: default;
 
     @include mediaQuery(767px) {
       font-size: 1.5rem;
     }
     span {
       font-size: 1.7rem;
+      cursor: default;
       @include mediaQuery(767px) {
         font-size: 1.2rem;
       }
@@ -55,6 +57,7 @@
     display: flex;
     font-size: 14px;
     margin-top: 4px;
+    cursor: default;
     @include mediaQuery(767px) {
       flex-direction: column;
     }
@@ -113,6 +116,7 @@
     .text {
       padding-left: 10px;
       font-weight: 700;
+      cursor: default;
     }
   }
 
@@ -122,6 +126,7 @@
     font-weight: 400;
     font-style: italic;
     opacity: 0.7;
+    cursor: default;
   }
 
   .overview-title {
@@ -132,8 +137,13 @@
   .overview {
     font-size: 1rem;
     line-height: 1.4;
+    cursor: default;
   }
 
+  h3 {
+    cursor: default;
+  }
+  
   .d-xs-none {
     display: none;
     @include mediaQuery(767px) {

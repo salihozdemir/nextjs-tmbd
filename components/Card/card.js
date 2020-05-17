@@ -14,7 +14,7 @@ const Card = ({
   return (
     <div className="card">
       <div className="card-img">
-        <Link href="/movie/[slug]" as={`/${card_type}/${slug(title)}-${id}`}>
+        <Link href={`/${card_type}/[slug]`} as={`/${card_type}/${slug(title)}-${id}`}>
           <a>
             <img
               src={`https://image.tmdb.org/t/p/w342${poster_path}`}
@@ -26,7 +26,7 @@ const Card = ({
         <VoteChart voteAverage={vote_average * 10} className="vote-chart-index" />
       </div>
       <div className="card-body">
-        <Link href="/movie/[slug]" as={`/${card_type}/${slug(title)}-${id}`}>
+        <Link href={`/${card_type}/[slug]`} as={`/${card_type}/${slug(title)}-${id}`}>
           <a>
             <h2>{title}</h2>
           </a>

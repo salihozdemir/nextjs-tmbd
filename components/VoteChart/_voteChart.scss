@@ -4,6 +4,7 @@
   height: 45px;
   width: 45px;
   top: 1px;
+  cursor: default;
 
   @include mediaQuery(600px) {
     height: 35px;
@@ -13,5 +14,6 @@
 
 .vote-chart-details {
   height: 55px;
+  cursor: default;
   width: 55px;
 }

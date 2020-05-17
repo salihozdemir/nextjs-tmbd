@@ -2,18 +2,18 @@ import axios from 'utils/axios'
 import Crew from 'components/Crew/crew'
 import InfoHeader from 'components/InfoHeader/infoHeader'
 
-const MovieDetail = ({ movie, casts }) => (
+const TvDetails = ({ tv, casts }) => (
   <div id="detail">
     <InfoHeader
-      genres={movie.genres}
-      backdrop_path={movie.backdrop_path}
-      poster_path={movie.poster_path}
-      title={movie.title}
-      release_date={movie.release_date}
-      runtime={movie.runtime}
-      vote_average={movie.vote_average}
-      tagline={movie.tagline}
-      overview={movie.overview}
+      genres={tv.genres}
+      backdrop_path={tv.backdrop_path}
+      poster_path={tv.poster_path}
+      title={tv.name}
+      release_date={tv.first_air_date}
+      runtime={tv.episode_run_time[0]}
+      vote_average={tv.vote_average}
+      tagline={tv.original_name}
+      overview={tv.overview}
     />
     <div id="crew">
       <div className="container">
@@ -34,20 +34,20 @@ const MovieDetail = ({ movie, casts }) => (
 )
 
 export async function getServerSideProps(context) {
-  const movieId = context.params.slug.split('-').slice(-1)[0]
-  const movieData = await axios.get(`movie/${movieId}`, {
+  const tvId = context.params.slug.split('-').slice(-1)[0]
+  const tvData = await axios.get(`tv/${tvId}`, {
     params: { api_key: process.env.API_KEY }
   })
-  const creditData = await axios.get(`movie/${movieId}/credits`, {
+  const creditData = await axios.get(`tv/${tvId}/credits`, {
     params: { api_key: process.env.API_KEY }
   })
 
   return {
     props: {
-      movie: movieData.data,
+      tv: tvData.data,
       casts: creditData.data.cast.filter((c) => c.profile_path != null)
     }
   }
 }
 
-export default MovieDetail
+export default TvDetails

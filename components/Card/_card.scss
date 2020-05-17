@@ -63,6 +63,7 @@
     .release-data {
       margin-top: 0.5rem;
       font-size: 0.8rem;
+      cursor: default;
       @include themify($themes) {
         color: themed(release-date);
       }
