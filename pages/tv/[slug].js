@@ -1,9 +1,13 @@
 import axios from 'utils/axios'
 import Crew from 'components/Crew/crew'
 import InfoHeader from 'components/InfoHeader/infoHeader'
+import Head from 'next/head'
 
 const TvDetails = ({ tv, casts }) => (
   <div id="detail">
+    <Head>
+      <title>{tv.name}</title>
+    </Head>
     <InfoHeader
       genres={tv.genres}
       backdrop_path={tv.backdrop_path}
