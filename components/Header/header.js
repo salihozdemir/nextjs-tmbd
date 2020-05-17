@@ -1,11 +1,8 @@
 import Link from '../Link/link'
-import { useContext } from 'react'
-import { ThemeContext } from '../Layout/layout'
 import { MdMovieFilter } from 'react-icons/md'
 import { FaMoon } from 'react-icons/fa'
 
-const Header = () => {
-  const themeContext = useContext(ThemeContext)
+const Header = ({ theme, setTheme }) => {
   return (
     <div className="container">
       <nav>
@@ -25,7 +22,9 @@ const Header = () => {
         </div>
         <div className="nav-theme">
           <button
-            onClick={() => themeContext.themeDispatch(themeContext.themeState)}
+            onClick={() =>
+              setTheme(theme === 'theme-dark' ? 'theme-light' : 'theme-dark')
+            }
           >
             <FaMoon size="1.6rem" />
           </button>

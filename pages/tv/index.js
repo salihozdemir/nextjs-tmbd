@@ -30,8 +30,8 @@ export default () => {
         hasMore={hasMore}
         threshold={1000}
         loader={
-          <div className="loader">
-            <h4 key={0}>Loading...</h4>
+          <div key={0} className="loader">
+            <h4>Loading...</h4>
           </div>
         }
       >
