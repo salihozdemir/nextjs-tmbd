@@ -4,7 +4,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  box-shadow: 0 3px 1px -1px rgba(0, 0, 0, 0.2);
   transition: all 0.15s ease-in-out;
   @include themify($themes) {
     background-color: themed(general-bg);
@@ -13,7 +12,6 @@ nav {
   .nav-brands {
     display: flex;
     align-items: center;
-    flex-grow: 1;
     @include themify($themes) {
       color: themed(general-color);
     }
@@ -69,7 +67,6 @@ nav {
   .nav-theme {
     display: flex;
     justify-content: flex-end;
-    flex-grow: 1;
     margin-right: 10px;
 
     button {
